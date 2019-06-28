@@ -21,7 +21,8 @@ metadata:
     app.kubernetes.io/name: hello
 spec:
   selector:
-    app.kubernetes.io/name: hello
+    matchLabels:
+      app.kubernetes.io/name: hello
   strategy:
     type: Recreate
   template:
