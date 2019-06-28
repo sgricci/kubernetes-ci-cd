@@ -14,7 +14,7 @@ spec:
   type: NodePort
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kr8sswordz
@@ -37,7 +37,7 @@ spec:
         - containerPort: 3002
           name: kr8sswordz
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Ingress
 metadata:
  name: kr8sswordz
