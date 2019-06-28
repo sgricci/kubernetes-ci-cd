@@ -10,7 +10,6 @@ spec:
       targetPort: 80
   selector:
     app: hello-kenzan
-    tier: hello-kenzan
   type: NodePort
 
 ---
@@ -27,7 +26,6 @@ spec:
     metadata:
       labels:
         app: hello-kenzan
-        tier: hello-kenzan
     spec:
       containers:
       - image: 127.0.0.1:30400/hello-kenzan:$BUILD_TAG
