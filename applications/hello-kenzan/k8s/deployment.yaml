@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: hello
   labels:
-    app: hello
+    app.kubernetes.io/name: hello
 spec:
   selector:
-    app: hello
+    app.kubernetes.io/name: hello
   ports:
     - port: 80
       targetPort: 80
@@ -18,16 +18,16 @@ kind: Deployment
 metadata:
   name: hello
   labels:
-    app: hello
+    app.kubernetes.io/name: hello
 spec:
   selector:
-    app: hello
+    app.kubernetes.io/name: hello
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: hello
+        app.kubernetes.io/name: hello
     spec:
       containers:
       - image: 127.0.0.1:30400/hello-kenzan:$BUILD_TAG
